@@ -1,0 +1,473 @@
+# 001 read and write heating
+record(bi,"$(P)readHeating")
+	{
+		field(DESC, "read heating")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readHeating $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+		field(SCAN, "1 second")
+	}
+	
+record(bo,"$(P)setHeating")
+	{
+		field(DESC, "set heating")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setHeating $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+	}
+
+# 002 read and write standby
+
+record(bi,"$(P)readStandby")
+	{
+		field(DESC, "read Standby")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readStandby $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+		field(SCAN, "1 second")
+	}
+	
+record(bo,"$(P)setStandby")
+	{
+		field(DESC, "set Standby")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setStandby $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+	}
+	
+#012 Enable venting
+record(bi,"$(P)readenablevent")
+	{
+		field(DESC, "read enablevent")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readenablevent $(PORT)")
+		field(ZNAM, "no")
+		field(ONAM, "yes")
+		field(SCAN, "1 second")
+	}
+	
+record(bo,"$(P)setenablevent")
+	{
+		field(DESC, "set enablevent")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setenablevent $(PORT)")
+		field(ZNAM, "no")
+		field(ONAM, "yes")
+	}
+
+#023 Motor Pump
+record(bi,"$(P)readmotorpump")
+	{
+		field(DESC, "read motor pump")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readmotorpump $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+		field(SCAN, "1 second")
+	}
+	
+record(bo,"$(P)setmotorpump")
+	{
+		field(DESC, "set motor pump")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setmotorpump $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+	}
+
+#025 Operation mode backing pump
+record(mbbi,"$(P)readgasmode")
+	{
+		field(DESC, "Operation mode backing pump")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readgasmode $(PORT)")
+		field(ZRVL, "0")
+		field(ONVL, "1")
+		field(TWVL, "2")
+		field(THVL, "3")
+		field(ZRST, "continuous operation")
+		field(ONST, "intermittent operation")
+		field(TWST, "delayed switching on")
+		field(THST, "delayed interval operation")
+		field(SCAN, "1 second")
+	}
+	
+record(mbbo,"$(P)setgasmode")
+	{
+		field(DESC, "Operation mode backing pump")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setgasmode $(PORT)")
+		field(ZRVL, "0")
+		field(ONVL, "1")
+		field(TWVL, "2")
+		field(THVL, "3")
+		field(ZRST, "continuous operation")
+		field(ONST, "intermittent operation")
+		field(TWST, "delayed switching on")
+		field(THST, "delayed interval operation")
+	}
+
+#026 Rotation speed setting mode
+record(bi,"$(P)readSpdSetMode")
+	{
+		field(DESC, "read Speed Set Mode")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readSpdSetMode $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+		field(SCAN, "1 second")
+	}
+	
+record(bo,"$(P)setSpdSetMode")
+	{
+		field(DESC, "set Speed Set Mode")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setSpdSetMode $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+	}
+
+#027 gas mode
+record(mbbi,"$(P)readgasmode")
+	{
+		field(DESC, "read gas mode")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readgasmode $(PORT)")
+		field(ZRVL, "0")
+		field(ONVL, "1")
+		field(TWVL, "2")
+		field(ZRST, "heavy gases")
+		field(ONST, "light gases")
+		field(TWST, "Hhlium")
+		field(SCAN, "1 second")
+	}
+	
+record(mbbo,"$(P)setgasmode")
+	{
+		field(DESC, "set gas mode")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setgasmode $(PORT)")
+		field(ZRVL, "0")
+		field(ONVL, "1")
+		field(TWVL, "2")
+		field(ZRST, "heavy gases")
+		field(ONST, "light gases")
+		field(TWST, "Hhlium")
+	}
+
+#030 Venting mode
+record(mbbi,"$(P)readventingmode")
+	{
+		field(DESC, "read venting mode")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readventingmode $(PORT)")
+		field(ZRVL, "0")
+		field(ONVL, "1")
+		field(TWVL, "2")
+		field(ZRST, "delayed venting")
+		field(ONST, "no venting")
+		field(TWST, "direct venting")
+		field(SCAN, "1 second")
+	}
+	
+record(mbbo,"$(P)setventingmode")
+	{
+		field(DESC, "set venting mode")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setventingmode $(PORT)")
+		field(ZRVL, "0")
+		field(ONVL, "1")
+		field(TWVL, "2")
+		field(ZRST, "delayed venting")
+		field(ONST, "no venting")
+		field(TWST, "direct venting"))
+	}
+
+#050 Sealing gas
+record(bi,"$(P)readsealinggas")
+	{
+		field(DESC, "read sealing gas")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readsealinggas $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+		field(SCAN, "1 second")
+	}
+	
+record(bo,"$(P)setsealinggas")
+	{
+		field(DESC, "set sealing gas")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setsealinggas $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+	}
+
+#060 Control via interface
+record(mbbi,"$(P)readCtrlVialnt")
+	{
+		field(DESC, "Control via interface")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readCtrlVialnt $(PORT)")
+		field(ZRVL, "1")
+		field(ONVL, "2")
+		field(TWVL, "4")
+		field(THVL, "8")
+		field(FRVL, "16")
+		field(FVVL, "255")
+		field(ZRST, "remote")
+		field(ONST, "RS-485")
+		field(TWST, "PV.can")
+		field(THST, "Fieldbus")
+		field(FRST, "E74")
+		field(FVST, "unlock interface selection")
+		field(SCAN, "1 second")
+	}
+	
+record(mbbo,"$(P)setCtrlVialnt")
+	{
+		field(DESC, "Control via interface")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setCtrlVialnt $(PORT)")
+		field(ZRVL, "1")
+		field(ONVL, "2")
+		field(TWVL, "4")
+		field(THVL, "8")
+		field(FRVL, "16")
+		field(FVVL, "255")
+		field(ZRST, "remote")
+		field(ONST, "RS-485")
+		field(TWST, "PV.can")
+		field(THST, "Fieldbus")
+		field(FRST, "E74")
+		field(FVST, "unlock interface selection")
+	}
+
+
+#061 Interface selection locked
+record(bi,"$(P)readIntSelLckd")
+	{
+		field(DESC, "Interface selection locked")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readIntSelLckd $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+		field(SCAN, "1 second")
+	}
+	
+record(bo,"$(P)setIntSelLckd")
+	{
+		field(DESC, "Interface selection locked")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setIntSelLckd $(PORT)")
+		field(ZNAM, "off")
+		field(ONAM, "on")
+	}
+	
+#300 Remote priority
+record(bi,"$(P)readRemotePrio")
+	{
+		field(DESC, "read Remote Priority")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readRemotePrio $(PORT)")
+		field(ZNAM, "no")
+		field(ONAM, "yes")
+		field(SCAN, "1 second")
+	}
+	
+record(bo,"$(P)setRemotePrio")
+	{
+		field(DESC, "set Remote Priority")
+		field(DTYP, "stream")
+		field(OUT, "@TC110.proto setRemotePrio $(PORT)")
+		field(ZNAM, "no")
+		field(ONAM, "yes")
+	} 
+	
+#304 Overtemperature pump
+record(bi,"$(P)readOvTempElec")
+	{
+		field(DESC, "Overtemperature electronic drive unit")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readOvTempElec $(PORT)")
+		field(ZNAM, "no")
+		field(ONAM, "yes")
+		field(SCAN, "1 second")
+	}
+
+#305 Overtemperature pump
+record(bi,"$(P)readOvTempPump")
+	{
+		field(DESC, "Overtemperature pump")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readOvTempPump $(PORT)")
+		field(ZNAM, "no")
+		field(ONAM, "yes")
+		field(SCAN, "1 second")
+	}
+
+#306 Target speed reached
+record(bi,"$(P)readsetSpdAtt")
+	{
+		field(DESC, "Target speed reached")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readsetSpdAtt $(PORT)")
+		field(ZNAM, "no")
+		field(ONAM, "yes")
+		field(SCAN, "1 second")
+	}
+	
+#307 Pump accelerating
+record(bi,"$(P)readPumpAccel")
+	{
+		field(DESC, "Pump accelerating")
+		field(DTYP, "stream")
+		field(INP, "@TC110.proto readPumpAccel $(PORT)")
+		field(ZNAM, "no")
+		field(ONAM, "yes")
+		field(SCAN, "1 second")
+	}
+
+
+
+#309 Actual rotation speed
+record(longin,"$(P)readActualSpdHz")
+	{
+		field(DESC,"Actual Speed")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readActualSpdHz $(PORT)")
+		field(EGU, "Hz")
+		field(SCAN, "1 second")
+	}
+	
+#308 read "set rotation speed"	
+record(longin,"$(P)readsetRotSpdHz")
+	{
+		field(DESC,"set rotation speed")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readsetRotSpdHz $(PORT)")
+		field(EGU, "Hz")
+		field(SCAN, "1 second")
+	}
+	
+#310 Drive current
+record(longin,"$(P)readDrvCurrent")
+	{
+		field(DESC,"Drive Current")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readDrvCurrent $(PORT)")
+		field(EGU, "A")
+		field(SCAN, "1 second")
+		field(FLNK, "$(P)DrvCurrent")
+	}
+	
+record(calc,"$(P)DrvCurrent")
+	{
+	field(INPA, "$(P)readDrvCurrent.VAL")
+	field(CALC, "A/100")
+	field(EGU, "A")
+	}
+
+#313 Drive Voltage
+record(longin,"$(P)readDrvVoltage")
+	{
+		field(DESC,"Drive Voltage")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readDrvVoltage $(PORT)")
+		field(EGU, "V")
+		field(SCAN, "1 second")
+		field(FLNK, "$(P)DrvVoltage")
+	}
+	
+record(calc,"$(P)DrvVoltage")
+	{
+	field(INPA, "$(P)readDrvVoltage.VAL")
+	field(CALC, "A/100")
+	field(EGU, "V")
+	}
+
+#315 Nominal Spd
+record(longin,"$(P)readNominalSpd")
+	{
+		field(DESC,"Nominal rotation Speed")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readNominalSpd $(PORT)")
+		field(EGU, "Hz")
+		field(SCAN, "1 second")
+	}
+
+#316 Drive Power
+record(longin,"$(P)readDrvPower")
+	{
+		field(DESC,"Drive Power")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readDrvPower $(PORT)")
+		field(EGU, "W")
+		field(SCAN, "1 second")
+		field(FLNK, "$(P)DrvPower")
+	}
+	
+record(calc,"$(P)DrvPower")
+	{
+	field(INPA, "$(P)readDrvPower.VAL")
+	field(CALC, "A/100")
+	field(EGU, "W")
+	}
+
+
+#326 Temperature electronics
+record(longin,"$(P)readTempElec")
+	{
+		field(DESC,"read Temperature electronics")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readTempElec $(PORT)")
+		field(EGU, "C")
+		field(SCAN, "1 second")
+	}
+
+#330 Temperature Pump bottom part
+record(longin,"$(P)readTempPumpBot")
+	{
+		field(DESC,"read Temperature Pump bottom part")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readTempPumpBot $(PORT)")
+		field(EGU, "C")
+		field(SCAN, "1 second")
+	}
+	
+#398 Actual rotation speed	
+record(longin,"$(P)readActualSpdrpm")
+	{
+		field(DESC,"Actual Speed")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readActualSpdrpm $(PORT)")
+		field(EGU, "rpm")
+		field(SCAN, "1 second")
+	}
+	
+#397 read "set rotation spped"	
+record(longout,"$(P)readsetRotSpdrpm")
+	{
+		field(DESC,"set rotation speed")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readsetRotSpdrpm $(PORT)")
+		field(EGU, "Hz")
+		field(SCAN, "1 second")
+	}
+	
+#399 Nominal Speed
+record(longin,"$(P)readNominalSpd")
+	{
+		field(DESC,"Nominal Speed")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readNominalSpd $(PORT)")
+		field(EGU, "rpm")
+		field(SCAN, "1 second")
+	}
+	
+	
+	
