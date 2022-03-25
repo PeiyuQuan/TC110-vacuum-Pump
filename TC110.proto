@@ -1,4 +1,4 @@
-Terminator = CR;
+
 
 #001 Heating
 readHeating {out "1230000102=?%+<sum8>";in "1231000106%{000000|111111}%+<sum8>";}
