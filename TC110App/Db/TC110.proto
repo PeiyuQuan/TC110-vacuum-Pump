@@ -1,0 +1,116 @@
+Terminator = CR;
+
+#001 Heating
+#readHeating {out "0010000102=?%+<sum8>";in "0011000106%6d%+<sum8>";}
+#setHeating {out "0011000106%6.6d%+<sum8>";in "0011000106%6d%+<sum8>";}
+
+#002 Standby
+readStandby {out "0010000202=?%+<sum8>";in "0011000206%6d%+<sum8>";}
+setStandby {out "0011000206%6.6d%+<sum8>";in "0011000206%6d%+<sum8>";}
+
+#010 Pumping station
+readPumpgStatn {out "0010001002=?%+<sum8>";in "0011001006%6d%+<sum8>";}
+setPumpgStatn {out "0011001006%6.6d%+<sum8>";in "0011001006%6d%+<sum8>";}
+
+#012 Enable venting
+readenablevent {out "0010001202=?%+<sum8>";in "0011001206%6d%+<sum8>";}
+setenablevent {out "0011001206%6.6d%+<sum8>";in "0011001206%6d%+<sum8>";}
+
+#023 Motor Pump
+readmotorpump {out "0010002302=?%+<sum8>";in "0011002306%6d%+<sum8>";}
+setmotorpump {out "0011002306%6.6d%+<sum8>";in "0011002306%6d%+<sum8>";}
+
+#025 Operation mode backing pump
+readOpModeBKP {out "0010002502=?%+<sum8>";in "0011002503%3d%+<sum8>";}
+setOpModeBKP {out "0011002503%3.3d%+<sum8>";in "0011002503%3d%+<sum8>";}
+
+#026 Rotation speed setting mode
+readSpdSetMode {out "0010002602=?%+<sum8>";in "0011002603%3d%+<sum8>";}
+setSpdSetMode {out "0011002603%3.3d%+<sum8>";in "0011002603%3d%+<sum8>";}
+
+#027 gas mode
+readgasmode {out "0010002702=?%+<sum8>";in "0011002703%3d%+<sum8>";}
+setgasmode {out "0011002703%3.3d%+<sum8>";in "0011002703%3d%+<sum8>";}
+
+#030 Venting mode
+readventingmode {out "0010003002=?%+<sum8>";in "0011003003%3d%+<sum8>";}
+setventingmode {out "0011003003%3.3d%+<sum8>";in "0011003003%3d%+<sum8>";}
+
+#050 Sealing gas
+#readsealinggas {out "0010005002=?%+<sum8>"; in "0011005006%6d%+<sum8>";}
+#setsealinggas {out "0011005006%6.6d%+<sum8>"; in "0011005006%6d%+<sum8>";}
+
+#060 Control via interface
+#readCtrlVialnt {out "0010006002=?%+<sum8>";in "0011006003%3d%+<sum8>";}
+#setCtrlVialnt {out "0011006003%3.3d%+<sum8>";in "0011006003%3d%+<sum8>";}
+
+#061 Interface selection locked
+#readIntSelLckd {out "0010006102=?%+<sum8>";in "0011006106%6d%+<sum8>";}
+#setIntSelLckd {out "0011006106%6.6d%+<sum8>";in "0011006106%6d%+<sum8>";}
+
+#300 Remote priority
+#readRemotePrio {out "0010030002=?%+<sum8>";in "0011030006%6d%+<sum8>";}
+#setRemotePrio {out "0011030006%6.6d%+<sum8>";in "0011030006%6d%+<sum8>";}
+
+
+#304 Overtemperature electronic drive unit
+#readOvTempElec {out "0010030402=?%+<sum8>"; in "0011030406%6d%+<sum8>";}
+
+#305 Overtemperature pump
+#readOvTempPump {out "0010030502=?%+<sum8>"; in "0011030506%6d%+<sum8>";}
+
+#306 Target speed reached
+#readsetSpdAtt {out "0010030602=?%+<sum8>"; in "0011030606%6d%+<sum8>";}
+
+#307 Pump accelerating
+#readPumpAccel {out "0010030702=?%+<sum8>"; in "0011030706%6d%+<sum8>";}
+
+#308 Actual rotation speed
+#readsetRotSpdHz {out "0010030802=?%+<sum8>"; in "0011030806%6d%+<sum8>";}
+
+#309 Actual rotation speed
+#readActualSpdHz {out "0010030902=?%+<sum8>"; in "0011030906%6d%+<sum8>";}
+
+#310 Drive current
+#readDrvCurrent {out "0010031002=?%+<sum8>"; in "0011031006%6d%+<sum8>";}
+
+#313 Drive voltage
+#readDrvVoltage {out "0010031302=?%+<sum8>"; in "0011031306%6d%+<sum8>";}
+
+#315 Nominal Spd
+#readNominal_Spd {out "0010031502=?%+<sum8>"; in "0011031506%6d%+<sum8>";}
+
+#316 Drive power
+#readDrvPower {out "0010031602=?%+<sum8>"; in "0011031606%6d%+<sum8>";}
+
+#326 Temperature electronics
+readTempElec {out "0010032602=?%+<sum8>"; in "0011032606%6d%+<sum8>";}
+
+
+#330 Temperature Pump bottom part
+#readTempPumpBot {out "0010033002=?%+<sum8>"; in "0011033006%6d%+<sum8>";}
+
+#397 Actual rotation speed
+readsetRotSpdrpm {out "0010039702=?%+<sum8>"; in "0011039706%6d%+<sum8>";}
+
+#398 Actual rotation speed
+readActualSpdrpm {out "0010039802=?%+<sum8>"; in "0011039806%6d%+<sum8>";}
+
+#399 Nominal Speed
+#readNominalSpd {out "0010039902=?%+<sum8>"; in "0011039906%6d%+<sum8>";}
+
+#707 rotation speed setting mode
+readSpdSVal {out "0010070702=?%+<sum8>";in "0011070706%6d%+<sum8>";}
+setSpdSVal {out "0011070706%6.6d%+<sum8>";in "0011070706%6d%+<sum8>";}
+
+#717 set rotation speed at standby
+readSpdbySVal {out "0010071702=?%+<sum8>";in "0011071706%6d%+<sum8>";}
+setSpdbySVal {out "0011071706%6.6d%+<sum8>";in "0011071706%6d%+<sum8>";}
+
+#720 Vent speed
+readVentSpd {out "0010072002=?%+<sum8>";in "0011072003%3d%+<sum8>";}
+setVentSpd {out "0011072003%3.3d%+<sum8>";in "0011072003%3d%+<sum8>";}
+
+#721 Vent time
+readVentTime {out "0010072102=?%+<sum8>";in "0011072106%6d%+<sum8>";}
+setVentTime {out "0011072106%6.6d%+<sum8>";in "0011072106%6d%+<sum8>";}
