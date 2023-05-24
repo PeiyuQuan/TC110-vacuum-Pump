@@ -37,7 +37,8 @@ setventingmode {out "0011003003%3.3d%+<sum8>";in "0011003003%3d%+<sum8>";}
 readSetRotSpd {out "0010030802=?%+<sum8>";in "0011030806%6d%+<sum8>";}
 #309 ActualSpd
 readActualSpd {out "0010030902=?%+<sum8>"; in "0011030906%6d%+<sum8>";}
-
+#310 Drive current
+readDrvCurrent {out "0010031002=?%+<sum8>"; in "0011031006%6d%+<sum8>";}
 #326 Temperature electronics
 readTempElec {out "0010032602=?%+<sum8>"; in "0011032606%6d%+<sum8>";}
 
@@ -51,6 +52,10 @@ readActualSpdrpm {out "0010039802=?%+<sum8>"; in "0011039806%6d%+<sum8>";}
 #707 rotation speed setting mode
 readSpdSVal {out "0010070702=?%+<sum8>";in "0011070706%6d%+<sum8>";}
 setSpdSVal {out "0011070706%6.6d%+<sum8>";in "0011070706%6d%+<sum8>";}
+
+#708 Set value power consumption
+readPwrSVal {out "0010070802=?%+<sum8>"; in "0011070803%3d%+<sum8>";}
+setPwrSVal {out "0011070803%3.3d%+<sum8>"; in "0011070803%3d%+<sum8>";}
 
 #717 set rotation speed at standby
 readSpdbySVal {out "0010071702=?%+<sum8>";in "0011071706%6d%+<sum8>";}
