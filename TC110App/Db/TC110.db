@@ -207,6 +207,25 @@ record(longin,"$(P)$(M)readActualSpd")
 		field(SCAN, "1 second")
 	}
 
+#310 Drive Current
+record(longin,"$(P)$(M)readDrvCurrent")
+	{
+		field(DESC,"Drive Current")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readDrvCurrent $(PORT)")
+		field(EGU, "A")
+		field(SCAN, "1 second")
+		field(FLNK, "$(P)$(M)readDrvCurrent_read")
+	}
+
+
+record(calc,"$(P)$(M)readDrvCurrent_read")
+	{
+		field(INPA, "$(P)$(M)readDrvCurrent.VAL")
+		field(CALC, "A/100")
+		field(EGU, "A")
+	}
+	
 #326 Temperature electronics
 record(longin,"$(P)$(M)readTempElec")
 	{
@@ -265,7 +284,31 @@ record(longout,"$(P)$(M)setSpdSVal")
 		field(OUT,"@TC110.proto setSpdSVal $(PORT)")
 		field(EGU, "%")
 	}
-	
+#708 set value power cumsumption
+record(longin,"$(P)$(M)readPwrSVal")
+	{
+		field(DESC,"power cumsumption")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readPwrSVal $(PORT)")
+		field(EGU, "%")
+		field(SCAN, "1 second")
+	}
+
+record(calc,"$(P)$(M)readPwrSVal_read")
+	{
+		field(INPA, "$(P)readPwrSVal.VAL")
+		field(CALC, "A/100")
+		field(EGU, "%")
+	}
+
+record(longout,"$(P)$(M)setPwrSVal")
+	{
+		field(DESC,"power cumsumption")
+		field(DTYP,"stream")
+		field(OUT,"@TC110.proto setPwrSVal $(PORT)")
+		field(EGU, "%")
+	}
+
 ##717 set rotation speed at standby
 record(longin,"$(P)$(M)readSpdbySVal")
 	{
