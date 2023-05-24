@@ -33,6 +33,10 @@ setgasmode {out "0011002703%3.3d%+<sum8>";in "0011002703%3d%+<sum8>";}
 readventingmode {out "0010003002=?%+<sum8>";in "0011003003%3d%+<sum8>";}
 setventingmode {out "0011003003%3.3d%+<sum8>";in "0011003003%3d%+<sum8>";}
 
+#308 SetRotSpd
+readSetRotSpd {out "0010030802=?%+<sum8>";in "0011030806%6d%+<sum8>";}
+#309 ActualSpd
+readActualSpd {out "0010030902=?%+<sum8>"; in "0011030906%6d%+<sum8>";}
 
 #326 Temperature electronics
 readTempElec {out "0010032602=?%+<sum8>"; in "0011032606%6d%+<sum8>";}
