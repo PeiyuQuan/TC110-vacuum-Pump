@@ -188,10 +188,24 @@ record(mbbo,"$(P)$(M)setventingmode")
 		field(TWST, "direct venting")
 	}
 
-
-
-
-
+#308 read set rotation speed (Hz)
+record(longin,"$(P)$(M)readSetRotSpd")
+	{
+		field(DESC,"set rotation speed")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readSetRotSpd $(PORT)")
+		field(EGU, "Hz")
+		field(SCAN, "1 second")
+	}
+#309 read Actual rotation speed (Hz)
+record(longin,"$(P)$(M)readActualSpd")
+	{
+		field(DESC,"Actual rotation speed")
+		field(DTYP,"stream")
+		field(INP,"@TC110.proto readActualSpd $(PORT)")
+		field(EGU, "Hz")
+		field(SCAN, "1 second")
+	}
 
 #326 Temperature electronics
 record(longin,"$(P)$(M)readTempElec")
