@@ -224,6 +224,7 @@ record(calc,"$(P)$(M)readDrvCurrent_read")
 		field(INPA, "$(P)$(M)readDrvCurrent.VAL")
 		field(CALC, "A/100")
 		field(EGU, "A")
+		field(PREC, "2")
 	}
 	
 #326 Temperature electronics
@@ -275,6 +276,7 @@ record(calc,"$(P)$(M)readSpdSVal_read")
 		field(INPA, "$(P)$(M)readSpdSVal.VAL")
 		field(CALC, "A/100")
 		field(EGU, "%")
+		field(PREC, "1")
 	}
 
 record(longout,"$(P)$(M)setSpdSVal")
