@@ -296,12 +296,6 @@ record(longin,"$(P)$(M)readPwrSVal")
 		field(SCAN, "1 second")
 	}
 
-record(calc,"$(P)$(M)readPwrSVal_read")
-	{
-		field(INPA, "$(P)readPwrSVal.VAL")
-		field(CALC, "A/100")
-		field(EGU, "%")
-	}
 
 record(longout,"$(P)$(M)setPwrSVal")
 	{
@@ -347,12 +341,6 @@ record(longin,"$(P)$(M)readVentSpd")
 		field(SCAN, "1 second")
 	}
 
-record(calc,"$(P)$(M)readVentSpd_read")
-	{
-		field(INPA, "$(P)readVentSpd.VAL")
-		field(CALC, "A/100")
-		field(EGU, "%")
-	}
 
 record(longout,"$(P)$(M)setVentSpd")
 	{
