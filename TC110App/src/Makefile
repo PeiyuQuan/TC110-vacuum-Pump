@@ -55,7 +55,7 @@ TC110_DBD += drvAsynSerialPort.dbd
 TC110_DBD += calc.dbd
 TC110_DBD += stream-scalcout.dbd
 TC110_DBD += stream.dbd
-TC110_DBD += as.dbd
+#TC110_DBD += as.dbd
 TC110_DBD += asSupport.dbd
 # TC110_registerRecordDeviceDriver.cpp derives from TC110.dbd
 TC110_SRCS += TC110_registerRecordDeviceDriver.cpp
