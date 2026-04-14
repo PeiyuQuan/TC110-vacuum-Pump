@@ -16,7 +16,7 @@ epicsEnvSet("PREFIX", "SLAC:TC110:")
 epicsEnvSet("PORT", "serial4")
 epicsEnvSet("M","m1:")
 
-drvAsynIPPortConfigure("serial4", "192.168.0.35:4004<192.168.0.35:4004/> COM", 0, 0, 0)
+drvAsynIPPortConfigure("serial4", "192.168.0.35:4004 COM", 0, 0, 0)
 asynOctetSetInputEos("serial4",0,"\r")
 asynOctetSetOutputEos("serial4",0,"\r")
 asynSetOption("serial4",0,"baud","9600")
